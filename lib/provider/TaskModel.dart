@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:to_do_list/model/Task.dart';
 
-class CartModel extends ChangeNotifier {
+class TaskModel extends ChangeNotifier {
   /// Internal, private state of the cart.
   final List<Task> _todotasks = [];
 
