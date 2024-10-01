@@ -28,7 +28,12 @@ class _ListTasksState extends State<ListTasks> {
                 ListTasksWidget(),
                 ListTasksWidget(),
               ],
-              )
+              ),
+                floatingActionButton: FloatingActionButton(
+                child: Icon(Icons.add),
+                onPressed: (){
+                  Navigator.pushNamed(context, "addTask");
+                }),
             
             
                 ),

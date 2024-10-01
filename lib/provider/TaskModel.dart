@@ -16,5 +16,12 @@ class TaskModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  void addTask(Task task){
+
+    _todotasks.add(task);
+    notifyListeners();
+
+  }
+
 
 }
