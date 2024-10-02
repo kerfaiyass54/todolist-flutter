@@ -18,9 +18,9 @@ class _ListTasksState extends State<ListTasks> {
             child: Scaffold(
                 appBar: AppBar(
                   bottom: const TabBar(tabs: [
-                    Tab(icon: Icon(Icons.task)),
-                    Tab(icon: Icon(Icons.time_to_leave)),
-                    Tab(icon: Icon(Icons.text_fields)),
+                    Text("Today"),
+                    Text("Tomorrrow"),
+                    Text("Others"),
                   ]),
                 ),
               body: const TabBarView(children: [

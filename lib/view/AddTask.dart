@@ -45,10 +45,21 @@ class _AddTaskState extends State<AddTask> {
             },onPageChanged: (focusedDay) {
               _focusedDay = focusedDay;
             },calendarBuilders: CalendarBuilders(
+                  markerBuilder: (context, datetime, events){
+                    return Container(
+                      width: 15,
+                      height: 20,
+                      decoration: BoxDecoration(
+                        color: Colors.cyanAccent,
+                        borderRadius: BorderRadius.circular(4.0)
+                      ),
+                      child: Center(
+                        child: Text(task.counTasksByDate(datetime).toString())
+                      ),
+                    );
+                  },
                   dowBuilder: (context, day) {
                     if (day.weekday == DateTime.sunday) {
-      
-      
                       return Center(
                         child: Text(
                           "week",
@@ -56,8 +67,11 @@ class _AddTaskState extends State<AddTask> {
                         ),
                       );
                     }
+
                   },
+
                 ),
+
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),

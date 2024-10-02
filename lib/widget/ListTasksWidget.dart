@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:to_do_list/model/Task.dart';
 import 'package:provider/provider.dart';
 import 'package:to_do_list/provider/TaskModel.dart';
+import 'package:to_do_list/library/globals.dart' as globals;
 class ListTasksWidget extends StatelessWidget {
   const ListTasksWidget({super.key});
 
@@ -9,7 +10,7 @@ class ListTasksWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<TaskModel>(
         builder: (context, task, child) {
-          return ListView.builder(itemCount: task.todotasks.length,
+          return ListView.builder(itemCount: task.todotasks[globals.today]!.length,
             itemBuilder: (BuildContext context, int index) {
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
@@ -19,13 +20,13 @@ class ListTasksWidget extends StatelessWidget {
                     border: Border.all(color: Color(0xFF1F31BA)),
                   ),
                   child: CheckboxListTile(
-                    title: Text(task.todotasks[index].name),
+                    title: Text(task.todotasks[globals.today]![index].name),
                     subtitle: Text(
-                        task.todotasks[index].dateOfFinish.toString()),
+                        task.todotasks[globals.today]![index].dateOfFinish.toString()),
                     onChanged: (bool? value) {
-                      task.markAsDone(index);
+                      task.markAsDone(globals.today,index);
                     },
-                    value: task.todotasks[index].finished,
+                    value: task.todotasks[globals.today]![index].finished,
 
                   ),),);
             },);
