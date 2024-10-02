@@ -6,8 +6,8 @@ class TaskModel extends ChangeNotifier {
   /// Internal, private state of the cart.
   final Map<String, List<Task>> _todotasks = {
     globals.today: [Task("PFE", false, "projet de fin d'études", DateTime.now())],
-    globals.tomorrow: [Task("PFE", false, "projet de fin d'études", DateTime.now())],
-    globals.other: [Task("PFE", false, "projet de fin d'études", DateTime.now())]
+    globals.tomorrow: [Task("PFA", false, "projet de fin d'études", DateTime.now())],
+    globals.other: [Task("PFI", false, "projet de fin d'études", DateTime.now())]
   };
 
   /// An unmodifiable view of the items in the cart.

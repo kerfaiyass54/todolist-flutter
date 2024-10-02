@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:to_do_list/provider/TaskModel.dart';
-import 'package:to_do_list/widget/ListTasksWidget.dart';
-
+import 'package:to_do_list/widget/ListTasksTodayWidget.dart';
+import 'package:to_do_list/widget/ListTasksTomorrowWidget.dart';
+import 'package:to_do_list/widget/ListTasksOthersWidget.dart';
 class ListTasks extends StatefulWidget {
   const ListTasks({super.key});
 
@@ -24,9 +25,12 @@ class _ListTasksState extends State<ListTasks> {
                   ]),
                 ),
               body: const TabBarView(children: [
-                ListTasksWidget(),
-                ListTasksWidget(),
-                ListTasksWidget(),
+                ListTasksTodayWidget(),
+                ListTasksTomorrowWidget(),
+                ListTasksOthersWidget()
+
+
+
               ],
               ),
                 floatingActionButton: FloatingActionButton(
