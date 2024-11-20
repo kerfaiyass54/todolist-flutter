@@ -30,7 +30,7 @@
 ### Steps to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/todolist-app.git
+   git clone https://github.com/kerfaiyass54/todolist-flutter.git
    cd todolist-app
 
 2. Install dependencies:
