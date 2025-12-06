@@ -1,7 +1,7 @@
-# todolist-flutter
+# To do list
 
 ## 🚀 Overview
-**ToDoList** is a simple and intuitive Flutter application designed to help you manage your daily tasks efficiently. With a clean and user-friendly interface, you can easily add, view, and delete tasks to stay organized and productive. Whether you're a student, professional, or just someone who wants to keep track of their to-dos, this app is perfect for you.
+This project is a simple and intuitive Flutter application designed to help you manage your daily tasks efficiently. With a clean and user-friendly interface, you can easily add, view, and delete tasks to stay organized and productive. Whether you're a student, professional, or just someone who wants to keep track of their to-dos, this app is perfect for you.
 
 ## ✨ Features
 - 📝 **Add new tasks**: Easily create new tasks with a simple and straightforward interface.
@@ -39,95 +39,6 @@ flutter run
 - **Docker**: (if applicable)
 - **Development Setup**: (if applicable)
 
-## 🎯 Usage
-
-### Basic Usage
-```dart
-// Import necessary packages
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:to_do_list/provider/TaskModel.dart';
-import 'package:to_do_list/view/AddTask.dart';
-import 'package:to_do_list/view/ListTasks.dart';
-
-// Main function to run the app
-void main() {
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (context) => TaskModel()),
-      ],
-      child: const MyApp(),
-    ),
-  );
-}
-
-// MyApp widget
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'ToDoList',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      routes: {
-        "listTasks":(context)=> ListTasks(),
-        "addTask":(context)=> AddTask(),
-      },
-      home: ListTasks()
-    );
-  }
-}
-```
-
-### Advanced Usage
-- **Adding Tasks**: Use the `AddTask` screen to add new tasks with a date.
-- **Marking Tasks as Completed**: Use the checkbox in the `ListTasks` screen to mark tasks as completed.
-- **Deleting Tasks**: Use the delete icon in the `ListTasks` screen to remove tasks.
-
-## 📁 Project Structure
-```
-todolist-flutter/
-├── android/
-│   ├── app/
-│   │   ├── build.gradle
-│   │   ├── src/
-│   │   │   ├── debug/
-│   │   │   │   └── AndroidManifest.xml
-│   │   │   ├── main/
-│   │   │   │   └── AndroidManifest.xml
-│   │   │   └── profile/
-│   │   │       └── AndroidManifest.xml
-│   ├── build.gradle
-│   └── gradle.properties
-├── lib/
-│   ├── library/
-│   │   └── globals.dart
-│   ├── main.dart
-│   ├── model/
-│   │   └── Task.dart
-│   ├── provider/
-│   │   └── TaskModel.dart
-│   ├── view/
-│   │   ├── AddTask.dart
-│   │   ├── ListTasks.dart
-│   │   └── widget/
-│   │       ├── ListTasksOthersWidget.dart
-│   │       ├── ListTasksTodayWidget.dart
-│   │       └── ListTasksTomorrowWidget.dart
-│   └── widget/
-│       └── ListTasksTodayWidget.dart
-├── test/
-│   └── widget_test.dart
-├── .gitignore
-├── analysis_options.yaml
-├── pubspec.yaml
-└── README.md
-```
 
 ## 🔧 Configuration
 - **Environment Variables**: None
@@ -140,27 +51,9 @@ todolist-flutter/
 - **Code Style Guidelines**: Follow Dart and Flutter coding conventions.
 - **Pull Request Process**: Open a pull request with a clear description of the changes.
 
-## 📝 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👥 Authors & Contributors
-- **Maintainers**: [Your Name]
-- **Contributors**: [List of contributors]
-
-## 🐛 Issues & Support
-- **Report Issues**: Open an issue on the [GitHub repository](https://github.com/kerfaiyass54/todolist-flutter/issues).
-- **Where to Get Help**: Join the Flutter community on [Flutter.dev](https://flutter.dev/community) or [Stack Overflow](https://stackoverflow.com/questions/tagged/flutter).
-- **FAQ**: [Link to FAQ](https://github.com/kerfaiyass54/todolist-flutter/wiki)
-
-## 🗺️ Roadmap
-- **Planned Features**: Add task categories, notifications, and dark mode.
-- **Known Issues**: [List of known issues](https://github.com/kerfaiyass54/todolist-flutter/issues)
-- **Future Improvements**: Improve UI/UX, add more features, and optimize performance.
-
----
 
 **Badges:**
-[![Build Status](https://github.com/kerfaiyass54/todolist-flutter/actions/workflows/ci.yml/badge.svg)](https://github.com/kerfaiyass54/todolist-flutter/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Flutter](https://img.shields.io/badge/Flutter-2.5.0-blue)](https://flutter.dev)
 
